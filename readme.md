@@ -15,4 +15,10 @@
 * In this project I work on a movies dataset and I do some data exploration and transformation using the popular python library "Pandas".
 
 3. <ins> Classification model using Apache Spark </ins> :white_check_mark:
-* 
+* Why spark? Spark DataFrame is distributed and hence processing in the Spark DataFrame is faster for a large amount of data. Spark DataFrames are excellent for building a scalable application.
+* In this project, I make a model classification using Apache Spark. 
+* I use decision tree as classifier to predict days with low humidity.
+
+4. <ins> Power BI-Personal Finance report </ins> :white_check_mark:
+* Power BI is an amazing BI tool for data exploration, transformation, use Power BI and increase your productivity doing incredible things.
+* In this project I work on a personal finance report.
