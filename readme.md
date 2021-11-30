@@ -30,3 +30,16 @@
 
 * <ins> [PROCESO-ETL-SFTP-A-MSSQL-](https://github.com/ntaxus/PROCESO-ETL-SFTP-A-MSSQL-) </ins> :white_check_mark:
 * This ETL process extract data from a SFTP, clean it and then loading into a MSS DB.
+
+* <ins> [SEND-MULTIPLE-REPORTS-POWER-BI-RPA
+]https://github.com/eeeds/SEND-MULTIPLE-REPORTS-POWER-BI-RPA) </ins> :white_check_mark:
+* UiPath is a a powerful RPA software, in this project we work with it as a orchestator for a ETL process where the data is extracting from Power Bi as pdfs, then we make some transformations. Finally, we send the final report using email.
+
+* <ins> [BNA-BANK-SCRAPER
+]https://github.com/eeeds/BNA-BANK-SCRAPER) </ins> :white_check_mark:
+* This project is a web scrapper using libraries such as bs4 and requests.
+* This scraper takes the dolar value from BNA (Banco Nacional de Buenos Aires) and converts it to Argentine Peso (ARS)
+
+* <ins> [Voice-Assistant-in-Python
+]https://github.com/eeeds/Voice-Assistant-in-Python) </ins> :white_check_mark:
+* Virtual Assistant in Python. It works with different libraries to emulate the behavior of different VA's offered in the market such as Alexa, Siri, Cortana, etc.
