@@ -22,3 +22,11 @@
 4. <ins> Power BI-Personal Finance report </ins> :white_check_mark:
 * Power BI is an amazing BI tool for data exploration, transformation, use Power BI and increase your productivity doing incredible things.
 * In this project I work on a personal finance report.
+
+
+## Other Projects
+* <ins> [GOOGLE-CLOUD-DATA-EXTRACTION](https://github.com/ntaxus/GOOGLE-CLOUD-DATA-EXTRACTION) </ins> :white_check_mark:
+* This ETL process extract data from Google Big Query and then clean it to finally save it into a MSS DB.
+
+* <ins> [PROCESO-ETL-SFTP-A-MSSQL-](https://github.com/ntaxus/PROCESO-ETL-SFTP-A-MSSQL-) </ins> :white_check_mark:
+* This ETL process extract data from a SFTP, clean it and then loading into a MSS DB.
