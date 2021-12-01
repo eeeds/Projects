@@ -71,7 +71,16 @@ def log(message):
     with open("logfile.txt","a") as f:
         f.write(timestamp + ',' + message + '\n')
 
+def extract_from_json(file):
+    """
+    This function allow you to extract data from a json file
+    """
+    import pandas as pd
+    
+    df = pd.read_json(file)
+    return df
+
 
 if __name__=='__main__':
     #web_scraping_part()
-    data_from_api()
+    #data_from_api()
