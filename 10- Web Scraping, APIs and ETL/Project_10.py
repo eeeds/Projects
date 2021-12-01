@@ -71,16 +71,34 @@ def log(message):
     with open("logfile.txt","a") as f:
         f.write(timestamp + ',' + message + '\n')
 
-def extract_from_json(file):
+def extract_from_json(file, columns):
     """
     This function allow you to extract data from a json file
     """
     import pandas as pd
-    
+
     df = pd.read_json(file)
+    df.columns = columns
+    return df
+
+def transform(df, exchange_rate):
+    """
+    This function work as a transform in the ETL process.
+    """
+    df = df.rename(columns = {'Market Cap (US$ Billion)':'Market Cap (GBP$ Billion)'})
+    df['Market Cap (GBP$ Billion)'] = df['Market Cap (GBP$ Billion)']*exchange_rate
     return df
 
 
 if __name__=='__main__':
+    import pandas as pd
+
+    pd.set_option("display.precision", 3)
     #web_scraping_part()
     #data_from_api()
+    df = extract_from_json('bank_market_cap.json', ['Name', 'Market Cap (US$ Billion)'])
+    #We going to change Market Cap (US$ Billion) into a GBP value
+    exchange_rate = df.loc['GBP']
+    print(exchange_rate.values)
+    #Transform the data
+    df = transform(df, exchange_rate.values)
