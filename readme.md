@@ -38,5 +38,5 @@
 * This project is a web scrapper. I use libraries such as bs4 and requests.
 * This scraper takes the dolar value from BNA (Banco Nacional de Buenos Aires) and converts it to Argentine Peso (ARS)
 
-* <ins> [Voice-Assistant-in-Python](https://github.com/eeeds/Voice-Assistant-in-Python) </ins> :white_check_mark:
+* <ins> [VOICE-ASSISTANT-IN-PYTHON](https://github.com/eeeds/Voice-Assistant-in-Python) </ins> :white_check_mark:
 * Virtual Assistant in Python. It works with different libraries to emulate the behavior of different VA's offered in the market such as Alexa, Siri, Cortana, etc.
