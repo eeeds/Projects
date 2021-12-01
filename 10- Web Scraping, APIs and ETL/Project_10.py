@@ -81,6 +81,13 @@ def extract_from_json(file, columns):
     df.columns = columns
     return df
 
+def extract_from_csv(file):
+    """
+    This function converts a csv file into a dataframe.
+    """
+    import pandas as pd
+    df = pd.read_csv(file, index_col = 0)
+    return df
 def transform(df, exchange_rate):
     """
     This function work as a transform in the ETL process.
@@ -89,16 +96,36 @@ def transform(df, exchange_rate):
     df['Market Cap (GBP$ Billion)'] = df['Market Cap (GBP$ Billion)']*exchange_rate
     return df
 
+def load(df):
+    """
+    Function to load data into a csv file.
+    """
+    df.to_csv('bank_market_cap_gbp.csv', index = False)
 
 if __name__=='__main__':
     import pandas as pd
 
     pd.set_option("display.precision", 3)
-    #web_scraping_part()
-    #data_from_api()
+    log('ETL started')
+    log('Web scraping started')
+    web_scraping_part()
+    log('Web scraping finished')
+    log('Data from API started')
+    data_from_api()
+    log('Data from API finished')
+    log('Extracting data from json started')
     df = extract_from_json('bank_market_cap.json', ['Name', 'Market Cap (US$ Billion)'])
+    log('Extracting data from json finished')
     #We going to change Market Cap (US$ Billion) into a GBP value
-    exchange_rate = df.loc['GBP']
-    print(exchange_rate.values)
+    df_rate = extract_from_csv('exchange_rates_1.csv')
+    exchange_rate = df_rate.loc['GBP'].values
+    print(exchange_rate)
     #Transform the data
-    df = transform(df, exchange_rate.values)
+    log('Transforming data started')
+    df = transform(df, exchange_rate)
+    log('Transforming data finished')
+    log('Loading data started')
+    load(df)
+    log('Loading data finished')
+
+    log('ETL finished')

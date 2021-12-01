@@ -1,0 +1,48 @@
+2021-Dec-01-15:42:35,ETL started
+2021-Dec-01-15:42:35,Web scraping started
+2021-Dec-01-15:42:36,Web scraping finished
+2021-Dec-01-15:42:36,Data from API started
+2021-Dec-01-15:42:37,Data from API finished
+2021-Dec-01-15:42:37,Extracting data from json started
+2021-Dec-01-15:42:37,Extracting data from json finished
+2021-Dec-01-15:44:02,ETL started
+2021-Dec-01-15:44:02,Web scraping started
+2021-Dec-01-15:44:03,Web scraping finished
+2021-Dec-01-15:44:03,Data from API started
+2021-Dec-01-15:44:04,Data from API finished
+2021-Dec-01-15:44:04,Extracting data from json started
+2021-Dec-01-15:44:04,Extracting data from json finished
+2021-Dec-01-15:44:38,ETL started
+2021-Dec-01-15:44:38,Web scraping started
+2021-Dec-01-15:44:39,Web scraping finished
+2021-Dec-01-15:44:39,Data from API started
+2021-Dec-01-15:44:40,Data from API finished
+2021-Dec-01-15:44:40,Extracting data from json started
+2021-Dec-01-15:44:40,Extracting data from json finished
+2021-Dec-01-15:44:57,ETL started
+2021-Dec-01-15:44:57,Web scraping started
+2021-Dec-01-15:44:59,Web scraping finished
+2021-Dec-01-15:44:59,Data from API started
+2021-Dec-01-15:44:59,Data from API finished
+2021-Dec-01-15:44:59,Extracting data from json started
+2021-Dec-01-15:45:00,Extracting data from json finished
+2021-Dec-01-15:45:44,ETL started
+2021-Dec-01-15:45:44,Web scraping started
+2021-Dec-01-15:45:46,Web scraping finished
+2021-Dec-01-15:45:46,Data from API started
+2021-Dec-01-15:45:46,Data from API finished
+2021-Dec-01-15:45:46,Extracting data from json started
+2021-Dec-01-15:45:46,Extracting data from json finished
+2021-Dec-01-15:45:46,Transforming data started
+2021-Dec-01-15:46:22,ETL started
+2021-Dec-01-15:46:22,Web scraping started
+2021-Dec-01-15:46:24,Web scraping finished
+2021-Dec-01-15:46:24,Data from API started
+2021-Dec-01-15:46:25,Data from API finished
+2021-Dec-01-15:46:25,Extracting data from json started
+2021-Dec-01-15:46:25,Extracting data from json finished
+2021-Dec-01-15:46:25,Transforming data started
+2021-Dec-01-15:46:25,Transforming data finished
+2021-Dec-01-15:46:25,Loading data started
+2021-Dec-01-15:46:25,Loading data finished
+2021-Dec-01-15:46:25,ETL finished
