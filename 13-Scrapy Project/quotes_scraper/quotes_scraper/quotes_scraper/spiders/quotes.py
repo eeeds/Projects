@@ -28,13 +28,19 @@ class QuotesSpider(scrapy.Spider):
     def parse_only_quotes(self, response, **kwargs):
         if kwargs:
             quotes = kwargs['quotes']
+            authors = kwargs['authors']
         quotes.extend(response.xpath('//span[@class = "text" and @itemprop = "text"]/text()').getall())
+        authors.extend(response.xpath('//small[@class="author"]/text()').getall())
           #Button to next page
         next_page_button_link = response.xpath('//li[@class = "next"]/a/@href').get()
         if next_page_button_link:
-            yield response.follow(next_page_button_link, callback=self.parse_only_quotes, cb_kwargs = {'quotes':quotes})
+            yield response.follow(next_page_button_link, callback=self.parse_only_quotes, cb_kwargs = {'quotes':quotes, 'authors':authors})
         else:
-            yield{'quotes':quotes}
+            quotes_author = []
+            i=0
+            for i in range(len(quotes)):
+                quotes_author.append({'Quote':quotes[i], 'Author':authors[i]})
+            yield{'quotes':quotes_author}
 
 
 
@@ -43,6 +49,7 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         title = response.xpath('//h1/a/text()').get()
         quotes = response.xpath('//span[@class = "text" and @itemprop = "text"]/text()').getall()
+        authors = response.xpath('//small[@class="author"]/text()').getall()
         top_tags = response.xpath('//div[contains(@class, "tags-box")]//span[@class="tag-item"]/a/text()').getall()
         #Save top tags
         top = getattr(self, 'top', None)
@@ -56,5 +63,9 @@ class QuotesSpider(scrapy.Spider):
         #Button to next page
         next_page_button_link = response.xpath('//li[@class = "next"]/a/@href').get()
         if next_page_button_link:
-            yield response.follow(next_page_button_link, callback=self.parse_only_quotes, cb_kwargs = {'quotes':quotes})
+            yield response.follow(next_page_button_link, callback=self.parse_only_quotes, cb_kwargs = {'quotes':quotes, 'authors':authors})
+        else:
+            quotes_author = list(zip(quotes, authors))
+            yield{
+                'quotes': quotes_author}
 
